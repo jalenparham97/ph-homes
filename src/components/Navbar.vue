@@ -1,13 +1,92 @@
 <template>
-  
+  <div class="navbar">
+    <md-toolbar  md-elevation="0" class="nav">
+      <!-- <h3 class="md-title">Logo</h3> -->
+      <img src="../assets/img/ph-logo.png" alt="P & H Real Estate Solutions" class="logo">
+      <div class="md-toolbar-section-end">
+        <md-button v-for="(item, i) in menu" :key="i" @click="changePage(item.to)" class="nav-link">{{ item.page }}</md-button>
+        <md-button @click="showNavigation = true" class="md-icon-button nav-menu">
+          <md-icon class="menu-icon md-accent">menu</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-drawer :md-active.sync="showNavigation" :md-elevation="1">
+      <md-list>
+        <md-list-item v-for="(item, i) in menu" :key="i" @click="changePage(item.to)">
+          <md-icon class="link-icon">{{ item.icon }}</md-icon>
+          <span class="md-list-item-text">{{ item.page }}</span>
+        </md-list-item>
+      </md-list>
+    </md-drawer>
+  </div>
 </template>
 
 <script>
 export default {
-  
+  name: 'Navbar',
+  data: () => ({
+    showNavigation: false,
+    menu: [
+      { to: '/', icon: 'home', page: 'Home' },
+      { to: '/about', icon: 'person', page: 'About' },
+      { to: '/contact', icon: 'call', page: 'Contact' },
+      { to: '/sell', icon: 'attach_money', page: 'Sell Your House' },
+    ]
+  }),
+  methods: {
+    changePage(to) {
+      this.showNavigation = false
+      this.$router.push(to)
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+// Colors
+// #C82027 Red
+// #051B3B Blue
+$primary-color: #C82027;
+$accent-color: #051B3B;
 
+// Navigation transparent
+.md-toolbar.nav {
+  background: transparent;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 200px;
+}
+
+button.nav-link {
+  color: #fff;
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.nav-menu {
+  display: none;
+}
+
+.md-icon.menu-icon {
+  // color: #000;
+}
+
+.md-list-item-text {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 746px) {
+  .nav-link {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+}
 </style>
