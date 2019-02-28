@@ -17,21 +17,21 @@
       <div class="pitch-container">
         <div class="pitch">
           <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary">calendar_today</md-icon>
+            <md-icon class="pitch-icon md-primary"><i class="far fa-calendar-times"></i></md-icon>
             <h2>Has your home listing expired?</h2>
           </div>
           <img src="../assets/img/calender.jpg" alt="Calender">
         </div>
         <div class="pitch reversed">
           <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary">build</md-icon>
+            <md-icon class="pitch-icon md-primary"><i class="fas fa-tools"></i></md-icon>
             <h2>Is your home inneed of repairs?</h2>
           </div>
           <img src="../assets/img/tools.jpg" alt="Tools">
         </div>
         <div class="pitch">
           <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary">flash_on</md-icon>
+            <md-icon class="pitch-icon md-primary"><i class="fas fa-bolt"></i></md-icon>
             <h2>Do you need to sell your home quickly</h2>
           </div>
           <img src="../assets/img/fast.jpg" alt="Sprinter">
