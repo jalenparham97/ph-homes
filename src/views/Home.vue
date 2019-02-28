@@ -38,59 +38,43 @@
         </div>
       </div>
 
-      <form class="md-layout">
-        <md-card class="md-layout-item md-size-50 md-small-size-100 md-elevation-5">
-          <md-card-header>
-            <div class="md-primary txt-center md-title">Contact Us Today</div>
-          </md-card-header>
+      <form>
+        <h2 class="txt-center">Contact Us Today</h2>
 
-          <md-card-content>
-            <div class="md-layout md-gutter">
-              <div class="md-layout-item md-small-size-100">
-                <md-field>
-                  <label for="first-name">First Name</label>
-                  <md-input name="first-name" id="first-name" />
-                </md-field>
-              </div>
-
-              <div class="md-layout-item md-small-size-100">
-                <md-field>
-                  <label for="last-name">Last Name</label>
-                  <md-input name="last-name" id="last-name"/>
-                </md-field>
-              </div>
-            </div>
-
-            <md-field>
-              <label for="email">Email</label>
-              <md-input type="email" name="email" id="email" />
-            </md-field>
-
-            <md-field>
-              <label>Message</label>
-              <md-textarea md-autogrow></md-textarea>
-            </md-field>
-          </md-card-content>
-
-          <md-progress-bar md-mode="indeterminate" v-if="sending" />
-
-          <md-card-actions class="card-actions">
-            <md-button type="submit" class="md-primary md-raised submit-btn" :disabled="sending">Send</md-button>
-          </md-card-actions>
-        </md-card>
-      </form>
+        <md-field>
+          <label>Name</label>
+          <md-input type="text"></md-input>
+        </md-field>
+        <md-field>
+          <label>Email</label>
+          <md-input type="email"></md-input>
+        </md-field>
+        <md-field>
+          <label>Phone</label>
+          <md-input type="tel"></md-input>
+        </md-field>
+        <md-field>
+          <label>Message</label>
+          <md-textarea type="text" md-autogrow></md-textarea>
+        </md-field>
+        <md-button class="md-raised md-primary">send</md-button>
+      </form>    
     </main>
+
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'home',
   sending: false,
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
   
 }
@@ -98,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  height: 97vh;
+  height: 99vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('../assets/img/home-header.jpg');
   background-size: cover;
   background-position: center;
@@ -108,7 +92,7 @@ header {
   & .banner-title {
     color: #fff;
     font-size: 3rem;
-    margin-top: 140px;
+    margin-top: 100px;
     padding: 20px;
     font-weight: 500;
   }
@@ -143,18 +127,14 @@ header {
 
 form {
   padding: 20px;
-  margin-top: 50px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
 
-  & .md-card {
+  & button {
+    width: 100%;
     margin: 0 auto;
-    padding-bottom: 20px;
-  }
-
-  & .md-card-actions {
-
-    & button.submit-btn {
-      margin: 0 auto;
-    }
   }
 }
 
