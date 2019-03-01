@@ -1,7 +1,6 @@
 <template>
   <div class="navbar">
     <md-toolbar  md-elevation="0" class="nav">
-      <!-- <h3 class="md-title">Logo</h3> -->
       <img src="../assets/img/ph-logo.png" alt="P & H Real Estate Solutions" class="logo">
       <div class="md-toolbar-section-end">
         <md-button v-for="(item, i) in menu" :key="i" @click="changePage(item.to)" class="nav-link">{{ item.page }}</md-button>

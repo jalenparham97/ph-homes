@@ -106,7 +106,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 820px) {
   .container {
     flex-direction: column;
 

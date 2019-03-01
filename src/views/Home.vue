@@ -1,16 +1,19 @@
 <template>
   <div class="home">
     <header>
-      <Navbar />
-
-      <div class="banner">
-        <h1 class="banner-title tc">Let Us Help You Find Your Real Estate Solution</h1>
-
-        <div class="action-btns">
-          <md-button class="md-raised md-primary" @click="$router.push('/sell')">Sell Your Home</md-button>
-          <md-button class="md-raised md-accent" @click="$router.push('/about')">Learn More</md-button>
+      <div class="cover bg-left bg-center-l bg-image">
+        <div class="bg-black-30 pb5 pb6-m pb7-l">
+          <Navbar/>
+          <div class="tc-l mt4 mt5-m mt6-l ph3 header">
+            <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Let Us Help You Find Your Real Estate Solutions</h1>
+            <h2 class="fw1 f3 white-90 mt3 mb4 lh-copy">P & H Real Estate Solutions LLC</h2>
+            <div class="action-btns mt3">
+              <md-button class="md-raised md-primary" @click="$router.push('/sell')">Sell Your Home</md-button>
+              <md-button class="md-raised md-accent" @click="$router.push('/about')">Learn More</md-button>
+            </div>
+          </div>
         </div>
-      </div>
+      </div> 
     </header>
 
     <main>
@@ -87,30 +90,8 @@ export default {
 $primary-color: #C82027;
 $accent-color: #051B3B;
 
-header {
-  height: 100vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('../assets/img/home-header.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  line-height: 1.5;
-
-  & .banner {
-    padding: 50px 0;
-  }
-
-  & .banner-title {
-    color: #fff;
-    font-size: 3rem;
-    // margin-top: 20px;
-    padding: 20px;
-    font-weight: 500;
-  }
-
-  & .action-btns {
-    display: flex;
-    justify-content: center;
-  }
+.bg-image {
+  background: url('../assets/img/home-header.jpg');
 }
 
 .title {
