@@ -126,7 +126,7 @@ header {
   justify-content: space-around;
 
   & .pitch {
-    width: 500px;
+    max-width: 500px;
 
     & h2 {
       font-size: 1.7rem;
@@ -180,8 +180,59 @@ form {
   }
 }
 
-@media only screen and (min-width: 746px) {
+@media only screen and (max-width: 900px) {
+  .everyone, .apart {
+    flex-direction: column;
+    
+    & .pitch {
+      text-align: center;
+    }
+  }
+}
 
+@media only screen and (max-width: 500px) {
+  .everyone, .apart {
+    flex-direction: column;
+    
+    & .pitch {
+      text-align: center;
+      padding: 20px;
+
+      & h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: $accent-color;
+      }
+
+      & p {
+        font-size: 1rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  .everyone {
+    margin-top: 40px;
+  }
+
+  .apart {
+    padding: 30px 0px 90px 0px;
+  }
+
+  .form-content {
+    flex-direction: column;
+    padding: 20px;
+
+    & .motto {
+      & h1 {
+        line-height: 1.5;
+      }
+    }
+
+    & form {
+      width: 100%;
+    }
+  }
 }
 </style>
 
