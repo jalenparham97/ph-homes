@@ -4,7 +4,7 @@
       <Navbar />
 
       <div class="banner">
-        <h1 class="banner-title txt-center">Let Us Help You Find Your Real Estate Solution</h1>
+        <h1 class="f1 f-headline-4 fw1 tc i white">Let Us Help You Find Your Real Estate Solution</h1>
 
         <div class="action-btns">
           <md-button class="md-raised md-primary" @click="$router.push('/sell')">Sell Your Home</md-button>
@@ -95,12 +95,16 @@ header {
   background-repeat: no-repeat;
   line-height: 1.5;
 
+  & .banner {
+    padding: 200px 0;
+  }
+
   & .banner-title {
-    color: #fff;
-    font-size: 3rem;
-    margin-top: 100px;
+    // color: #fff;
+    // font-size: 3rem;
+    // margin-top: 100px;
     padding: 20px;
-    font-weight: 500;
+    // font-weight: 500;
   }
 
   & .action-btns {
