@@ -197,6 +197,7 @@ form {
     & .pitch {
       text-align: center;
       padding: 20px;
+      margin-bottom: 30px;
 
       & h2 {
         font-size: 1.5rem;
