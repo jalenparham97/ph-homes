@@ -126,7 +126,6 @@ header {
   justify-content: space-around;
 
   & .pitch {
-    max-width: 500px;
 
     & h2 {
       font-size: 1.7rem;
@@ -180,24 +179,20 @@ form {
   }
 }
 
+@media only screen and (min-width: 900px) {
+  .pitch {
+    width: 500px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .everyone, .apart {
     flex-direction: column;
     
     & .pitch {
       text-align: center;
-    }
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .everyone, .apart {
-    flex-direction: column;
-    
-    & .pitch {
-      text-align: center;
       padding: 20px;
-      margin-bottom: 30px;
+      margin: auto auto 30px auto;
 
       & h2 {
         font-size: 1.5rem;
@@ -209,6 +204,10 @@ form {
         font-size: 1rem;
         line-height: 2;
       }
+    }
+
+    & img {
+      width: 100%;
     }
   }
 
@@ -225,6 +224,8 @@ form {
     padding: 20px;
 
     & .motto {
+      margin: 0 auto;
+
       & h1 {
         line-height: 1.5;
       }
