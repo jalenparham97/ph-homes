@@ -72,9 +72,7 @@ button.nav-link {
   display: none;
 }
 
-.md-icon.menu-icon {
-  // color: #000;
-}
+
 
 .md-list-item-text {
   font-size: 1rem;

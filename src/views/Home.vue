@@ -14,8 +14,6 @@
     </header>
 
     <main>
-      <!-- <h1 class="txt-center title">Improving Our Community, One Property At A Time</h1> -->
-      
       <div class="everyone">
         <div class="pitch">
           <h2>Real Estate Solutions For Everyone</h2>
@@ -24,27 +22,46 @@
 
         <img src="../assets/img/solution.jpg" alt="">
       </div>
-      <!-- <form>
-        <h2 class="txt-center">Contact Us Today</h2>
 
-        <md-field>
-          <label>Name</label>
-          <md-input type="text"></md-input>
-        </md-field>
-        <md-field>
-          <label>Email</label>
-          <md-input type="email"></md-input>
-        </md-field>
-        <md-field>
-          <label>Phone</label>
-          <md-input type="tel"></md-input>
-        </md-field>
-        <md-field>
-          <label>Message</label>
-          <md-textarea type="text" md-autogrow></md-textarea>
-        </md-field>
-        <md-button class="md-raised md-primary">send</md-button>
-      </form>     -->
+      <div class="apart">
+        <div class="pitch">
+          <h2>What Sets Us Apart</h2>
+          <p>At P&H Real Estate Solutions, LLC we specialize in buying and selling our homes at the price, and on the timeline, that works for both of us. Our extensive knowledge of real estate investing and large network of real estate investors nationwide allows us to offer more buying choices and a wide variety of selling options for all types of home buyers and sellers, including financially distressed homeowners. Our mission is to work hand in hand with all parties and to handle every situation with the utmost of professionalism and care.</p>
+        </div>
+
+        <img src="../assets/img/different.jpg" alt="">
+      </div>
+
+      <div class="form-content">
+        <div class="motto">
+          <h1 class="txt-center title">Improving Our Community, One Property At A Time</h1>
+          <div class="logo">
+            <img src="../assets/img/ph-logo.png" alt="">
+          </div>
+        </div>
+
+        <form>
+          <h2 class="txt-center">Contact Us Today</h2>
+
+          <md-field>
+            <label>Name</label>
+            <md-input type="text"></md-input>
+          </md-field>
+          <md-field>
+            <label>Email</label>
+            <md-input type="email"></md-input>
+          </md-field>
+          <md-field>
+            <label>Phone</label>
+            <md-input type="tel"></md-input>
+          </md-field>
+          <md-field>
+            <label>Message</label>
+            <md-textarea type="text" md-autogrow></md-textarea>
+          </md-field>
+          <md-button class="md-raised md-primary">send</md-button>
+        </form>    
+      </div>
     </main>
 
     <Footer/>
@@ -93,16 +110,20 @@ header {
 }
 
 .title {
-  margin: 40px auto;
-  font-size: 2rem;
-  color: $primary-color;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: $accent-color;
   line-height: 1.2;
 }
 
-.everyone {
+.logo {
+  max-width: 500px;
+  margin: 80px auto 70px auto;
+}
+
+.everyone, .apart {
   display: flex;
   justify-content: space-around;
-  margin: 50px auto;
 
   & .pitch {
     width: 500px;
@@ -124,15 +145,32 @@ header {
   }
 }
 
-form {
-  padding: 20px;
-  margin: 50px auto;
+.everyone {
+  margin: 100px auto;
+}
+
+.apart {
+  flex-direction: row-reverse;
+  background: #eee;
+  padding: 100px 0px;
+  margin-bottom: 70px;
+}
+
+.form-content {
   display: flex;
-  flex-direction: column;
-  max-width: 700px;
+  justify-content: space-around;
+  margin-bottom: 100px; 
+}
+
+.motto {
+  max-width: 600px;
+}
+
+form {
+  width: 500px;
 
   & h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $accent-color;
   }
 
