@@ -6,7 +6,7 @@
       <div class="md-toolbar-section-end">
         <md-button v-for="(item, i) in menu" :key="i" @click="changePage(item.to)" class="nav-link">{{ item.page }}</md-button>
         <md-button @click="showNavigation = true" class="md-icon-button nav-menu">
-          <md-icon class="menu-icon md-accent">menu</md-icon>
+          <md-icon class="menu-icon md-accent"><i class="fas fa-bars"></i></md-icon>
         </md-button>
       </div>
     </md-toolbar>
@@ -14,7 +14,7 @@
     <md-drawer :md-active.sync="showNavigation" :md-elevation="1">
       <md-list>
         <md-list-item v-for="(item, i) in menu" :key="i" @click="changePage(item.to)">
-          <md-icon class="link-icon">{{ item.icon }}</md-icon>
+          <md-icon class="link-icon"><i :class="item.icon"></i></md-icon>
           <span class="md-list-item-text">{{ item.page }}</span>
         </md-list-item>
       </md-list>
@@ -28,10 +28,10 @@ export default {
   data: () => ({
     showNavigation: false,
     menu: [
-      { to: '/', icon: 'home', page: 'Home' },
-      { to: '/about', icon: 'person', page: 'About' },
-      { to: '/contact', icon: 'call', page: 'Contact' },
-      { to: '/sell', icon: 'attach_money', page: 'Sell Your House' },
+      { to: '/', icon: 'fas fa-home', page: 'Home' },
+      { to: '/about', icon: 'fas fa-user-circle', page: 'About' },
+      { to: '/contact', icon: 'fas fa-phone', page: 'Contact' },
+      { to: '/sell', icon: 'fas fa-dollar-sign', page: 'Sell Your House' },
     ]
   }),
   methods: {

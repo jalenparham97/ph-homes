@@ -14,31 +14,17 @@
     </header>
 
     <main>
-      <div class="pitch-container">
+      <!-- <h1 class="txt-center title">Improving Our Community, One Property At A Time</h1> -->
+      
+      <div class="everyone">
         <div class="pitch">
-          <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary"><i class="far fa-calendar-times"></i></md-icon>
-            <h2>Has your home listing expired?</h2>
-          </div>
-          <img src="../assets/img/calender.jpg" alt="Calender">
+          <h2>Real Estate Solutions For Everyone</h2>
+          <p>P&H Real Estate Solutions, LLC is the area’s leading real estate solutions company. We successfully work with homeowners, buyers, sellers, real estate agents, and real estate investors, buying and selling all types of residential real estate. We are confident that we can find the right property or solution for you, whether you have a house to sell, are looking to buy your next investment property, or are looking for your family’s “forever home.” We can share our knowledge so that you can make the best decisions for your situation and we are dedicated to make everyone's experience a smooth and successful process.</p>
         </div>
-        <div class="pitch reversed">
-          <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary"><i class="fas fa-tools"></i></md-icon>
-            <h2>Is your home inneed of repairs?</h2>
-          </div>
-          <img src="../assets/img/tools.jpg" alt="Tools">
-        </div>
-        <div class="pitch">
-          <div class="pitch-title txt-center">
-            <md-icon class="pitch-icon md-primary"><i class="fas fa-bolt"></i></md-icon>
-            <h2>Do you need to sell your home quickly</h2>
-          </div>
-          <img src="../assets/img/fast.jpg" alt="Sprinter">
-        </div>
-      </div>
 
-      <form>
+        <img src="../assets/img/solution.jpg" alt="">
+      </div>
+      <!-- <form>
         <h2 class="txt-center">Contact Us Today</h2>
 
         <md-field>
@@ -58,7 +44,7 @@
           <md-textarea type="text" md-autogrow></md-textarea>
         </md-field>
         <md-button class="md-raised md-primary">send</md-button>
-      </form>    
+      </form>     -->
     </main>
 
     <Footer/>
@@ -70,7 +56,7 @@ import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'home',
+  name: 'home', 
   sending: false,
   components: {
     Navbar,
@@ -81,8 +67,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primary-color: #C82027;
+$accent-color: #051B3B;
+
 header {
-  height: 99vh;
+  height: 100vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url('../assets/img/home-header.jpg');
   background-size: cover;
   background-position: center;
@@ -103,26 +92,36 @@ header {
   }
 }
 
-.pitch-container {
-  margin-top: 50px;
+.title {
+  margin: 40px auto;
+  font-size: 2rem;
+  color: $primary-color;
+  line-height: 1.2;
+}
+
+.everyone {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
 
   & .pitch {
-    margin-bottom: 20px;
+    width: 500px;
 
-    & .pitch-title {
-      padding: 40px;
-      line-height: 1.3;
-
-      & .md-icon.pitch-icon {
-        font-size: 3rem !important;
-      }
-
-      & h2 {
-        font-size: 2rem;
-        font-weight: 500;
-      }
+    & h2 {
+      font-size: 1.7rem;
+      color: $accent-color;
     }
-  } 
+
+    & p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+
+  & img {
+    width: 500px;
+    height: 400px;
+  }
 }
 
 form {
@@ -132,6 +131,11 @@ form {
   flex-direction: column;
   max-width: 700px;
 
+  & h2 {
+    font-size: 2rem;
+    color: $accent-color;
+  }
+
   & button {
     width: 100%;
     margin: 0 auto;
@@ -139,16 +143,7 @@ form {
 }
 
 @media only screen and (min-width: 746px) {
-  .pitch {
-    display: flex;
 
-    & img {
-      width: 500px;
-      // height: 500px;
-      flex: 3;
-      height: 400px;
-    }
-  }
 }
 </style>
 

@@ -7,8 +7,8 @@
           <h3>We would love to hear from you!</h3>
           <h3>Send us a message and we’ll get right back in touch.</h3>
           <div class="contact-info">
-            <p>Email: email@email.com</p>
-            <p>Phone: (555) - 555 - 5555</p>
+            <p>Email: admin@phrealestatesolutions.com</p>
+            <p>Phone: (989) - 702 - 2000 </p>
           </div>
           <div class="socials">
             <md-button class="md-icon-button">
@@ -23,12 +23,12 @@
           </div>
         </div>
         <div class="greeting">
-          <h2>Lets Find A Solution</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolor blanditiis hic voluptate veniam. Quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sapiente quam dicta temporibus expedita sit!</p>
+          <h2>We Are A Real Estate Investing Company</h2>
+          <p>Our company buys, sells, and rents homes. We will not be acting as your real estate agent or broker if we buy your house, sell you a house, or rent you a home. We are excited to potentially work with you directly OR if you are represented by an agent or broker. We are focused on improving neighborhoods and redeveloping areas that we work in. If you have additional questions on agencies please contact your local real estate commission.</p>
         </div>
       </div>
       <div class="bottom-footer">
-        <p class="txt-center">P & H Real Estate Solutions, LLC &copy; All Rights Reserved 2019</p>
+        <p class="txt-center">P & H Real Estate Solutions, LLC &copy; All Rights Reserved 2019 | Designed by Jalen Parham</p>
       </div>
     </footer>
   </div>
@@ -62,19 +62,14 @@ footer {
 
   & p {
     margin: 0px;
+    font-size: 14px;
   }
-}
-
-form {
-  width: 550px;
-  display: flex;
-  flex-direction: column;
 }
 
 .contact-footer {
 
   & h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   & .socials {
@@ -91,45 +86,19 @@ form {
 }
 
 .greeting {
-  max-width: 400px;
+  max-width: 550px;
 
   & h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 1.2;
   }
 
   & p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
   }
 }
 
-.fields {
-  display: flex;
-  justify-content: space-between;
-}
-
-.input {
-  display: flex;
-  flex-direction: column
-}
-
-input {
-  width: 220px;
-  padding: 10px;
-  outline: $primary-color;
-  border-radius: 3px;
-  border: none;
-}
-
-textarea {
-  border-radius: 3px;
-  border: none;
-  padding: 10px;
-}
-
-input, textarea {
-  font-size: 1.2rem;
-}
 
 .title {
   & h2 {
