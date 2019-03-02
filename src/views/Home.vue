@@ -4,9 +4,9 @@
       <div class="cover bg-left bg-center-l bg-image">
         <div class="bg-black-30 pb5 pb6-m pb7-l">
           <Navbar/>
-          <div class="tc-l mt4 mt5-m mt6-l ph3 header">
-            <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Let Us Help You Find Your Real Estate Solutions</h1>
-            <h2 class="fw1 f3 white-90 mt3 mb4 lh-copy">P & H Real Estate Solutions LLC</h2>
+          <div class="tc mt4 mt5-m mt6-l ph3 header">
+            <h1 class="f2 f1-l white-90 mb0 lh-title">Let Us Help You Find Your Real Estate Solutions</h1>
+            <h2 class="f3 white-90 mt3 mb4 lh-copy">P & H Real Estate Solutions LLC</h2>
             <div class="action-btns mt3">
               <md-button class="md-raised md-primary" @click="$router.push('/sell')">Sell Your Home</md-button>
               <md-button class="md-raised md-accent" @click="$router.push('/about')">Learn More</md-button>
@@ -91,7 +91,7 @@ $primary-color: #C82027;
 $accent-color: #051B3B;
 
 .bg-image {
-  background: url('../assets/img/home-header.jpg');
+  background: url('../assets/img/home-header-4.jpg');
 }
 
 .title {
@@ -114,7 +114,7 @@ $accent-color: #051B3B;
 
     & h2 {
       font-size: 1.7rem;
-      color: $accent-color;
+      color: $primary-color;
     }
 
     & p {

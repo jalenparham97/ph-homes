@@ -4,9 +4,9 @@
       <div class="cover bg-left bg-center-l bg-image">
         <div class="bg-black-40 pb5 pb6-m pb7-l">
           <Navbar/>
-          <div class="tc-l mt4 mt5-m mt6-l ph3 header">
-            <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Why P&H Real Estate Solutions, LLC?</h1>
-            <h2 class="fw1 f3 white-90 mt3 mb4 lh-copy">Improving Our Community One Property At A Time</h2>
+          <div class="tc mt4 mt5-m mt6-l ph3 header">
+            <h1 class="f2 f1-l white-90 mb0 lh-title">Why P&H Real Estate Solutions, LLC?</h1>
+            <h2 class="f3 white-90 mt3 mb4 lh-copy">Improving Our Community One Property At A Time</h2>
             <div class="action-btns mt3">
               <md-button class="md-raised md-primary" @click="$router.push('/contact')">Contact Us Today</md-button>
             </div>
@@ -22,11 +22,11 @@
             <img src="../assets/img/ph-logo.png" alt="" class="logo aspect-ratio--object">
           </div>
         </div>
-        <p class="f4-ns lh-copy tc ">We are a real estate solutions company located in Saginaw, MI. We specialize in buying and selling homes, and we’re experts at finding solutions for people who are in the market to buy or sell their own home or investment property. Our diverse team has experience with all types of buying and selling scenarios, and we understand how to make every transaction simple and stress free. We own and sell our homes, and are confident that we have something to meet the needs of every buyer. We are also well versed in most types of home sales and are certain that we can find a win-win solution for every seller, whether it be a traditional or creative selling solution.</p>
+        <p class="f4-ns f5 lh-copy tc">We are a real estate solutions company located in Saginaw, MI. We specialize in buying and selling homes, and we’re experts at finding solutions for people who are in the market to buy or sell their own home or investment property. Our diverse team has experience with all types of buying and selling scenarios, and we understand how to make every transaction simple and stress free. We own and sell our homes, and are confident that we have something to meet the needs of every buyer. We are also well versed in most types of home sales and are certain that we can find a win-win solution for every seller, whether it be a traditional or creative selling solution.</p>
       </div>
 
       <div class="why-2 pa3">
-        <div class="md-layout md-gutter md-alignment-center">
+        <div class="md-layout md-gutter md-alignment-center why-2-container">
           <div class="md-layout-item md-medium-size-47 md-small-size-80 md-xsmall-size-100">
             <md-card md-with-hover class="card">
               <md-ripple>
@@ -50,7 +50,7 @@
             </md-card>
           </div>
 
-          <div class="md-layout-item md-medium-size-45 md-small-size-75 md-xsmall-size-100">
+          <div class="md-layout-item md-medium-size-47 md-small-size-75 md-xsmall-size-100">
             <md-card md-with-hover class="card card2">
               <md-ripple>
                 <md-card-header>
@@ -108,11 +108,16 @@ $accent-color: #051B3B;
   & p {
     margin: -50px auto auto auto;
     color: $accent-color;
+    max-width: 800px;
   }
 }
 
 .why-2 {
   margin-bottom: 70px;
+
+  & .why-2-container {
+    margin: 0 auto;
+  }
 
   & .card {
     max-width: 600px;
