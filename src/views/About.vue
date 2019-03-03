@@ -22,7 +22,7 @@
             <img src="../assets/img/ph-logo.png" alt="" class="logo aspect-ratio--object">
           </div>
         </div>
-        <p class="f4-ns f5 lh-copy tc">We are a real estate solutions company located in Saginaw, MI. We specialize in buying and selling homes, and we’re experts at finding solutions for people who are in the market to buy or sell their own home or investment property. Our diverse team has experience with all types of buying and selling scenarios, and we understand how to make every transaction simple and stress free. We own and sell our homes, and are confident that we have something to meet the needs of every buyer. We are also well versed in most types of home sales and are certain that we can find a win-win solution for every seller, whether it be a traditional or creative selling solution.</p>
+        <p class="f4-ns f5 tc">We are a real estate solutions company located in Saginaw, MI. We specialize in buying and selling homes, and we’re experts at finding solutions for people who are in the market to buy or sell their own home or investment property. Our diverse team has experience with all types of buying and selling scenarios, and we understand how to make every transaction simple and stress free. We own and sell our homes, and are confident that we have something to meet the needs of every buyer. We are also well versed in most types of home sales and are certain that we can find a win-win solution for every seller, whether it be a traditional or creative selling solution.</p>
       </div>
 
       <div class="why-2 pa3">
@@ -39,7 +39,7 @@
                 <md-card-content>
                   <div class="tc">
                     <h1 class="f3 mb2 title">Our Team</h1>
-                    <h2 class="f5 fw4 gray mt0 f4 lh-copy measure">With a wealth of experience under our belts (buying and selling homes), our team and network of real estate experts have handled some of the most complicated real estate transactions on the market today. Whether you're looking to sell your existing home or investment property or are looking to buy your forever home or a new investment, our goal is to find a solution that works for both of us. We approach every transaction with the utmost professionalism and care.</h2>
+                    <h2 class="f5 fw4 gray mt0 f4 measure">With a wealth of experience under our belts (buying and selling homes), our team and network of real estate experts have handled some of the most complicated real estate transactions on the market today. Whether you're looking to sell your existing home or investment property or are looking to buy your forever home or a new investment, our goal is to find a solution that works for both of us. We approach every transaction with the utmost professionalism and care.</h2>
                   </div>
                 </md-card-content>
 
@@ -62,7 +62,7 @@
                 <md-card-content>
                   <div class="tc">
                     <h1 class="f3 mb2 title">What Makes Us Different</h1>
-                    <h2 class="f5 fw4 gray mt0 f4 lh-copy measure">We embrace technology because it can streamline and automate our real estate transactions. We use a state-of-the-art business management system, keeping our business extremely organized and efficient so that we're able to spend less time shuffling paperwork and more time finding solutions that work for both of us.</h2>
+                    <h2 class="f5 fw4 gray mt0 f4 measure">We embrace technology because it can streamline and automate our real estate transactions. We use a state-of-the-art business management system, keeping our business extremely organized and efficient so that we're able to spend less time shuffling paperwork and more time finding solutions that work for both of us.</h2>
                   </div>
                 </md-card-content>
 
@@ -109,6 +109,7 @@ $accent-color: #051B3B;
     margin: -50px auto auto auto;
     color: $accent-color;
     max-width: 800px;
+    line-height: 1.5;
   }
 }
 
@@ -122,6 +123,7 @@ $accent-color: #051B3B;
   & .card {
     max-width: 600px;
     margin: 20px auto;
+    // min-height: 500px;
   }
 
   & .card2 {
@@ -135,6 +137,7 @@ $accent-color: #051B3B;
   & h2 {
     color: $accent-color;
     margin: 0 auto;
+    line-height: 1.5;
   }
 
   & .actions,  {
@@ -149,6 +152,16 @@ $accent-color: #051B3B;
     & button {
       margin: 0 auto;
     }
+  }
+}
+
+@media only screen and (max-width: 746px) {
+  p {
+    line-height: 2;
+  }
+
+  .card h2 {
+    line-height: 2;
   }
 }
 </style>
