@@ -109,7 +109,7 @@ $accent-color: #051B3B;
     margin: -50px auto auto auto;
     color: $accent-color;
     max-width: 800px;
-    line-height: 1.5;
+    line-height: 2;
   }
 }
 
