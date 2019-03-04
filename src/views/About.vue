@@ -16,6 +16,24 @@
     </header>
 
     <main>
+      <div class="why-2 pa3">
+        <div class="card">
+          <div class="card-img">
+            <img class="img" src="../assets/img/teamwork.svg" alt="">
+          </div>
+          <h2 class="tc">Our Team</h2>
+          <p class="f4-ns">With a wealth of experience under our belts, our team and network of real estate experts have handled some of the most complicated real estate transactions on the market today. Whether you are looking to sell your existing house or buy your forever home, our goal is to find a solution that works for both of us.</p>
+        </div>
+
+        <div class="card">
+         <div class="card-img">
+            <img class="img" src="../assets/img/computer.svg" alt="">
+          </div>
+          <h2 class="tc">What Makes Us Different</h2>
+          <p class="f4-ns">We embrace technology because it can streamline and automate our real estate transactions. We use a state-of-the-art business management system, keeping our business extremely organized and efficient so that we're able to spend less time shuffling paperwork and more time finding solutions that work for both of us.</p>
+        </div>
+      </div>
+
       <div class="why pa3 pa5-ns">
         <div class=" mw6-ns center pt1 logo-container">
           <div class="aspect-ratio aspect-ratio--16x9">
@@ -25,55 +43,6 @@
         <p class="f4-ns f5 tc">We are a real estate solutions company located in Saginaw, MI. We specialize in buying and selling homes, and we’re experts at finding solutions for people who are in the market to buy or sell their own home or investment property. Our diverse team has experience with all types of buying and selling scenarios, and we understand how to make every transaction simple and stress free. We own and sell our homes, and are confident that we have something to meet the needs of every buyer. We are also well versed in most types of home sales and are certain that we can find a win-win solution for every seller, whether it be a traditional or creative selling solution.</p>
       </div>
 
-      <div class="why-2 pa3">
-        <div class="md-layout md-gutter md-alignment-center why-2-container">
-          <div class="md-layout-item md-medium-size-47 md-small-size-80 md-xsmall-size-100">
-            <md-card md-with-hover class="card">
-              <md-ripple>
-                <md-card-header>
-                  <div class="tc">
-                    <img src="../assets/img/teamwork.svg" class="br-100 h4 w4 dib pa2" title="Photo of a kitty staring at you">
-                  </div>
-                </md-card-header>
-
-                <md-card-content>
-                  <div class="tc">
-                    <h1 class="f3 mb2 title">Our Team</h1>
-                    <h2 class="f5 fw4 gray mt0 f4 measure">With a wealth of experience under our belts (buying and selling homes), our team and network of real estate experts have handled some of the most complicated real estate transactions on the market today. Whether you're looking to sell your existing home or investment property or are looking to buy your forever home or a new investment, our goal is to find a solution that works for both of us. We approach every transaction with the utmost professionalism and care.</h2>
-                  </div>
-                </md-card-content>
-
-                <md-card-actions class="action-btn">
-                  <md-button class="md-raised md-primary">Sell Your Home</md-button>
-                </md-card-actions>
-              </md-ripple>
-            </md-card>
-          </div>
-
-          <div class="md-layout-item md-medium-size-47 md-small-size-75 md-xsmall-size-100">
-            <md-card md-with-hover class="card card2">
-              <md-ripple>
-                <md-card-header>
-                  <div class="tc">
-                    <img src="../assets/img/computer.svg" class="br-100 h4 w4 dib pa2" title="Photo of a kitty staring at you">
-                  </div>
-                </md-card-header>
-
-                <md-card-content>
-                  <div class="tc">
-                    <h1 class="f3 mb2 title">What Makes Us Different</h1>
-                    <h2 class="f5 fw4 gray mt0 f4 measure">We embrace technology because it can streamline and automate our real estate transactions. We use a state-of-the-art business management system, keeping our business extremely organized and efficient so that we're able to spend less time shuffling paperwork and more time finding solutions that work for both of us.</h2>
-                  </div>
-                </md-card-content>
-
-                <md-card-actions class="actions">
-                  <md-button class="md-raised md-primary">Buy From Us</md-button>
-                </md-card-actions>
-              </md-ripple>
-            </md-card>
-          </div>
-        </div>
-      </div>
     </main>
 
     <Footer />
@@ -104,64 +73,85 @@ $accent-color: #051B3B;
 }
 
 .why {
-
+  margin: -20px auto 50px auto;
   & p {
     margin: -50px auto auto auto;
-    color: $accent-color;
     max-width: 800px;
     line-height: 2;
   }
 }
 
 .why-2 {
-  margin-bottom: 70px;
-
-  & .why-2-container {
-    margin: 0 auto;
-  }
+  margin: 50px auto auto auto;
+  display: flex;
+  justify-content: space-around;
 
   & .card {
-    max-width: 600px;
+    width: 550px;
     margin: 20px auto;
-    // min-height: 500px;
-  }
+    padding: 30px 40px 40px 40px;
+    background: #fff;
+    border-top: 5px solid $primary-color;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
-  & .card2 {
-    min-height: 441.334px;
-  }
-
-  & .title {
-    color: $primary-color;
-  }
-
-  & h2 {
-    color: $accent-color;
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
-  & .actions,  {
-    margin-top: 44px;
-
-    & button {
-      margin: 0 auto;
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
-  }
 
-  & .action-btn {
-    & button {
+    & .card-img {
+      margin: 0 auto;
+      width: 170px;
+    }
+
+    & h2 {
+      color: $accent-color;
+      margin: 10px auto;
+      line-height: 1.5;
+    }
+
+    & p {
+      line-height: 1.5;
       margin: 0 auto;
     }
   }
 }
 
-@media only screen and (max-width: 746px) {
+@media only screen and (max-width: 1160px) {
+  .why-2 {
+    & .card {
+      width: 450px;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .why-2 {
+    flex-direction: column;
+
+    & .card {
+      width: 700px;
+    }
+  }
+}
+
+@media only screen and (max-width: 740px) {
   p {
     line-height: 2;
   }
 
-  .card h2 {
-    line-height: 2;
+  .why-2 {
+    flex-direction: column;
+
+    & .card {
+      width: 95%;
+
+      & p {
+        line-height: 2;
+        font-size: 1rem;
+      }
+    }
   }
 }
 </style>
