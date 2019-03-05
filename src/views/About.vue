@@ -135,6 +135,41 @@ $accent-color: #051b3b;
   }
 }
 
+@media only screen and (min-width: 1550px) {
+  .why-2 {
+    width: 1256px;
+
+    .team-diff {
+      & .card {
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .why-2 {
+    width: 80%;
+
+    .team-diff {
+      & .card {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .why-2 {
+
+    .team-diff {
+      & .card {
+        width: 470px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1160px) {
   .why-2 {
     width: 95%;
