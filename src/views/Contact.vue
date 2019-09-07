@@ -3,23 +3,22 @@
     <header>
       <div class="cover bg-left bg-center-l bg-image">
         <div class="bg-black-30 pb5 pb6-m pb7-l">
-          <Navbar/>
-          <div class="tc mt4 mt5-m mt6-l ph3 header">
+          <div class="tc pt4 pt5-m pt6-l ph3 header">
             <h1 class="f2 f1-l white-90 mb0 lh-title">Contact Us Today</h1>
             <h2 class="f3 white-90 mt3 mb4 lh-copy">We Would Love To Hear From You</h2>
             <div class="action-btns mt3">
-              <md-button class="md-raised md-accent" @click="$router.push('/about')">Learn More</md-button>
+              <md-button class="md-raised md-accent" @click="go('/about', 'about')">Learn More</md-button>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </header>
 
     <!-- Main Contact Page -->
     <div class="contact-container">
       <div class="contact-form">
         <form>
-          <h2 class="">Contact</h2>
+          <h2 class>Contact</h2>
 
           <md-field>
             <label>Name</label>
@@ -38,7 +37,7 @@
             <md-textarea type="text" md-autogrow></md-textarea>
           </md-field>
           <md-button class="md-raised md-primary">send</md-button>
-        </form>    
+        </form>
       </div>
       <div class="contact-info">
         <div class="info">
@@ -52,37 +51,32 @@
           <h4>Follow Us</h4>
           <div class="socials">
             <md-button class="md-icon-button">
-              <md-icon class="icon"><i class="fab fa-facebook"></i></md-icon>
+              <md-icon class="icon">
+                <i class="fab fa-facebook"></i>
+              </md-icon>
             </md-button>
             <md-button class="md-icon-button">
-              <md-icon class="icon"><i class="fab fa-linkedin"></i></md-icon>
+              <md-icon class="icon">
+                <i class="fab fa-linkedin"></i>
+              </md-icon>
             </md-button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
-import Footer from "../components/Footer.vue"
-
 export default {
-  name: 'Contact',
-  components: {
-    Navbar,
-    Footer
-  }
-}
+  name: "Contact",
+  props: ["go"]
+};
 </script>
 
 <style lang="scss" scoped>
-$primary-color: #C82027;
-$accent-color: #051B3B;
+$primary-color: #c82027;
+$accent-color: #051b3b;
 
 .bg-image {
   background: url("../assets/img/contact.jpg");
@@ -119,7 +113,6 @@ $accent-color: #051B3B;
     }
 
     & .socials {
-
       & .icon {
         color: $accent-color;
       }
@@ -143,19 +136,14 @@ $accent-color: #051B3B;
 
 @media only screen and (max-width: 1275px) {
   .contact-container {
-    
     & .contact-form {
       width: 500px;
     }
-
-
   }
 }
 
-
 @media only screen and (max-width: 830px) {
   .contact-container {
-
     & .contact-form {
       width: 350px;
     }
@@ -164,7 +152,6 @@ $accent-color: #051B3B;
 
 @media only screen and (min-width: 700px) {
   .contact-container {
-
     & .contact-info {
       & .socials {
         margin-left: -15px;

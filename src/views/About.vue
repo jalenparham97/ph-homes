@@ -3,15 +3,15 @@
     <header>
       <div class="cover bg-left bg-center-l bg-image">
         <div class="bg-black-40 pb5 pb6-m pb7-l">
-          <Navbar/>
-          <div class="tc mt4 mt5-m mt6-l ph3 header">
+          <div class="tc pt4 pt5-m pt6-l ph3 header">
             <h1 class="f2 f1-l white-90 mb0 lh-title">Why P&H Real Estate Solutions, LLC?</h1>
             <h2 class="f3 white-90 mt3 mb4 lh-copy">Improving Our Community One Property At A Time</h2>
             <div class="action-btns mt3">
               <md-button
                 class="md-raised md-primary"
-                @click="$router.push('/contact')"
+                @click="go('/contact', 'contact')"
               >Contact Us Today</md-button>
+              <md-button class="md-raised md-accent" @click="go('/sell', 'sell')">Sell Your Home</md-button>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="team-diff">
           <div class="card">
             <div class="card-img">
-              <img class="img" src="../assets/img/teamwork.svg" alt>
+              <img class="img" src="../assets/img/teamwork.svg" alt />
             </div>
             <h2 class="tc">Our Team</h2>
             <p
@@ -33,7 +33,7 @@
 
           <div class="card">
             <div class="card-img">
-              <img class="img" src="../assets/img/computer.svg" alt>
+              <img class="img" src="../assets/img/computer.svg" alt />
             </div>
             <h2 class="tc">What Makes Us Different</h2>
             <p
@@ -44,7 +44,7 @@
 
         <div class="card logo-card">
           <div class="card-img">
-            <img class="img" src="../assets/img/ph-logo.png" alt>
+            <img class="img" src="../assets/img/ph-logo.png" alt />
           </div>
           <p
             class="f4-ns"
@@ -52,22 +52,13 @@
         </div>
       </div>
     </main>
-
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue"
-import Footer from "../components/Footer.vue"
-
 export default {
   name: "home",
-  sending: false,
-  components: {
-    Navbar,
-    Footer
-  }
+  props: ["go"]
 };
 </script>
 
@@ -161,7 +152,6 @@ $accent-color: #051b3b;
 
 @media only screen and (max-width: 1270px) {
   .why-2 {
-
     .team-diff {
       & .card {
         width: 470px;

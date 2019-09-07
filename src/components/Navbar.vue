@@ -1,69 +1,83 @@
 <template>
   <div class="navbar">
-    <md-toolbar  md-elevation="0" class="nav">
-      <img src="../assets/img/ph-logo.png" alt="P & H Real Estate Solutions" class="logo">
+    <md-toolbar md-elevation="0" class="nav">
+      <img
+        src="../assets/img/ph-logo.png"
+        alt="P & H Real Estate Solutions"
+        class="logo"
+        @click="changePage('/', 'home')"
+      />
       <div class="md-toolbar-section-end">
-        <md-button v-for="(item, i) in menu" :key="i" @click="changePage(item.to)" class="nav-link">{{ item.page }}</md-button>
+        <md-button
+          v-for="(item, i) in menu"
+          :key="i"
+          @click="changePage(item.to, item.page)"
+          class="nav-link"
+          :class="activePage === item.page ? 'active-page' : ''"
+        >{{ item.page }}</md-button>
         <md-button @click="showNavigation = true" class="md-icon-button nav-menu">
-          <md-icon class="menu-icon md-accent"><i class="fas fa-bars"></i></md-icon>
+          <md-icon class="menu-icon md-accent">
+            <i class="fas fa-bars"></i>
+          </md-icon>
         </md-button>
       </div>
     </md-toolbar>
 
-    <md-drawer :md-active.sync="showNavigation" :md-elevation="1">
+    <md-app-drawer :md-active.sync="showNavigation" :md-elevation="1">
       <md-list>
         <md-list-item v-for="(item, i) in menu" :key="i" @click="changePage(item.to)">
-          <md-icon class="link-icon"><i :class="item.icon"></i></md-icon>
+          <md-icon class="link-icon">
+            <i :class="item.icon"></i>
+          </md-icon>
           <span class="md-list-item-text">{{ item.page }}</span>
         </md-list-item>
       </md-list>
-    </md-drawer>
+    </md-app-drawer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
+  props: ["activePage", "menu", "go"],
   data: () => ({
-    showNavigation: false,
-    menu: [
-      { to: '/', icon: 'fas fa-home', page: 'Home' },
-      { to: '/about', icon: 'fas fa-user-circle', page: 'About' },
-      { to: '/contact', icon: 'fas fa-phone', page: 'Contact' },
-      { to: '/sell', icon: 'fas fa-dollar-sign', page: 'Sell Your House' },
-    ]
+    showNavigation: false
   }),
   methods: {
-    changePage(to) {
-      this.showNavigation = false
-      this.$router.push(to)
+    changePage(to, page) {
+      this.showNavigation = false;
+      this.go(to, page);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 // Colors
 // #C82027 Red
 // #051B3B Blue
-$primary-color: #C82027;
-$accent-color: #051B3B;
+$primary-color: #c82027;
+$accent-color: #051b3b;
 
 // Navigation transparent
 .md-toolbar.nav {
-  background: transparent;
+  background: #eee;
   padding: 10px 20px;
+  border-top: 3px solid $primary-color;
 }
 
 .logo {
-  width: 200px;
+  width: 140px;
+  cursor: pointer;
 }
 
 button.nav-link {
-  color: #fff;
+  color: $accent-color;
+  margin-left: 10px;
 
   &:hover {
     background: $primary-color;
+    color: #fff;
   }
 }
 
@@ -71,10 +85,13 @@ button.nav-link {
   display: none;
 }
 
-
-
 .md-list-item-text {
   font-size: 1rem;
+}
+
+.active-page {
+  background: $primary-color;
+  color: #fff !important;
 }
 
 @media only screen and (max-width: 746px) {
