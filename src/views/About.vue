@@ -73,6 +73,8 @@ $accent-color: #051b3b;
 .why-2 {
   margin: 70px auto 70px auto;
   width: 90%;
+  display: flex;
+  flex-direction: column;
 
   & .team-diff {
     display: flex;
@@ -86,6 +88,8 @@ $accent-color: #051b3b;
   }
 
   & .logo-card {
+    margin: 0 auto;
+
     & .card-img {
       width: 300px !important;
     }
@@ -138,19 +142,30 @@ $accent-color: #051b3b;
   }
 }
 
+@media only screen and (max-width: 1550px) {
+  .why-2 {
+    width: 1200px;
+    .team-diff {
+      & .card {
+        width: 570px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .why-2 {
     width: 80%;
 
     .team-diff {
       & .card {
-        width: 500px;
+        width: 520px;
       }
     }
   }
 }
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1350px) {
   .why-2 {
     .team-diff {
       & .card {
@@ -160,10 +175,8 @@ $accent-color: #051b3b;
   }
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1200px) {
   .why-2 {
-    width: 95%;
-
     .team-diff {
       & .card {
         width: 460px;
@@ -172,8 +185,21 @@ $accent-color: #051b3b;
   }
 }
 
+@media only screen and (max-width: 1160px) {
+  .why-2 {
+    width: 900px;
+
+    .team-diff {
+      & .card {
+        width: 435px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 970px) {
   .why-2 {
+    width: 80%;
     & .team-diff {
       flex-direction: column;
       & .card {
@@ -192,6 +218,8 @@ $accent-color: #051b3b;
   }
 
   .why-2 {
+    width: 85%;
+
     .logo-card {
       & p {
         line-height: 2;
