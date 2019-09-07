@@ -23,7 +23,7 @@
       </div>
     </md-toolbar>
 
-    <md-app-drawer :md-active.sync="showNavigation" :md-elevation="1">
+    <md-drawer :md-active.sync="showNavigation" :md-elevation="1">
       <md-list>
         <md-list-item v-for="(item, i) in menu" :key="i" @click="changePage(item.to)">
           <md-icon class="link-icon">
@@ -32,7 +32,7 @@
           <span class="md-list-item-text">{{ item.page }}</span>
         </md-list-item>
       </md-list>
-    </md-app-drawer>
+    </md-drawer>
   </div>
 </template>
 

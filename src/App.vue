@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <!-- <md-app md-mode="reveal"> -->
     <Navbar :menu="menu" :activePage="activePage" :go="go" />
     <router-view :go="go"></router-view>
     <Footer />
-    <!-- </md-app> -->
   </div>
 </template>
 
